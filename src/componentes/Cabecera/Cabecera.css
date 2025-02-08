@@ -1,0 +1,10 @@
+.fondocabecera{
+    background-color: aliceblue;
+}
+
+.titulocabecera{
+    color: orange;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
