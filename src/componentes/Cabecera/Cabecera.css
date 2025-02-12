@@ -1,15 +1,15 @@
-.fondocabecera{
-    background-color: aliceblue;
+.navbar{
+    background-color: #ffeace;
 }
 
 .titulocabecera{
-    color: orange;
+    color: #f59432;
     font-size: 2em;
     font-weight: bold;
     margin: 0;
 }
 
-.imagenLogo{
+.logoCabecera{
     width: 90px;
     height: 67px;
 }

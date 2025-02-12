@@ -1,7 +1,7 @@
 const CentroEducativo = () => {
     return (
         <div>
-            <h1>Centro Educativo</h1>
+            <p>Centro Educativo</p>
         </div>
     )
 }

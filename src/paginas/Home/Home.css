@@ -1,0 +1,26 @@
+.carta-temas{
+    background-color: #364f59;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.img-temas{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.img-temas:hover{
+    animation: pasada 0.7s ease both;
+}
+
+@keyframes pasada {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateZ(1.05);
+    }
+}
