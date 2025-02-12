@@ -8,3 +8,13 @@
     font-weight: bold;
     margin: 0;
 }
+
+.imagenLogo{
+    width: 90px;
+    height: 67px;
+}
+
+.imagenIconos{
+    width: 30px;
+    height: 30px;
+}
