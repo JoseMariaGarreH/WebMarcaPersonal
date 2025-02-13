@@ -1,20 +1,18 @@
 const BotonIdiomas = (props) => {
 
-    const IDIOMA = "idiomaSeleccionado";
-
-    function asignarIdioma(event) {
-        console.log(event.target.value); 
+    function asignarIdioma(idioma) {
+        props.manejarIdioma(idioma); 
     }
 
     return (
-        <div id={IDIOMA}>
-            <a className="nav-link" onClick={asignarIdioma} >
+        <>
+            <a className="nav-link" onClick={() => asignarIdioma("es")}>
                 <img src="src/assets/flag-for-flag-spain-svgrepo-com.svg" alt="Bandera Española" className="imagenIconos" />
             </a>
-            <a className="nav-link" onClick={asignarIdioma}>
+            <a className="nav-link" onClick={() => asignarIdioma("gb")}>
                 <img src="src/assets/united-kingdom-uk-svgrepo-com.svg" alt="Bandera Inglesa" className="imagenIconos" />
             </a>
-        </div>
+        </>
     )
 }
 

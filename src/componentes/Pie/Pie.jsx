@@ -1,21 +1,26 @@
+import { useContext } from 'react';
 import './Pie.css';
+import IdiomaContext from '../../contextos/IdiomaContext';
 
 const Pie = () => {
+
+    const { idioma } = useContext(IdiomaContext);
+
     return (
         <div className="row">
             <footer className="fondofooter">
                 <div className="text-center fondosegundofooter">
                     <div className="row">
                         <div className="col-12 col-md-3">
-                            <h5 className="font-weight-bold" >Empresas</h5>
+                            <h5 className="font-weight-bold" >{idioma.temas.op1}</h5>
                             <h2 className="font-weight-bold">0</h2>
                         </div>
                         <div className="col-12 col-md-3 mx-auto">
-                            <h5 className="font-weight-bold">Proyectos</h5>
+                            <h5 className="font-weight-bold">{idioma.temas.op2}</h5>
                             <h2 className="font-weight-bold">0</h2>
                         </div>
                         <div className="col-12 col-md-3">
-                            <h5 className="font-weight-bold">Alumnos</h5>
+                            <h5 className="font-weight-bold">{idioma.temas.op3}</h5>
                             <h2 className="font-weight-bold">0</h2>
                         </div>
                     </div>
@@ -49,7 +54,7 @@ const Pie = () => {
                             </a>
                         </li>
                         <li className="list-inline-item">
-                            <a href="https://www.youtube.com/@cifpcarlostercero">
+                            <a href="https://www.youtube.com/@cifpcarlostercero" target="_blank">
                                 <img className="iconos" src="src/assets/youtube.svg" alt="Youtube" />
                             </a>
                         </li>
@@ -61,7 +66,7 @@ const Pie = () => {
                             <img src="src/img/mp-logoReves.png" alt="Logo" className="logofooter align-baseline" ></img>
                         </li>
                         <li className="list-inline-item">Marca Personal FP</li>
-                        <li className="list-inline-item"> | Diseño Web CFGS Desarrollo de Aplicaciones Web © 2024</li>
+                        <li className="list-inline-item"> | {idioma.pie.op1} CFGS {idioma.pie.op2} © 2024</li>
                     </ul>
                 </div>
             </footer>

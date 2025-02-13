@@ -1,12 +1,20 @@
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 import './Cabecera.css';
+import BotonIdiomas from "../BotonIdiomas";
+import IdiomaContext from "../../contextos/IdiomaContext";
 
 const Cabecera = () => {
 
     const navegar = useNavigate();
+    const { cambiarIdioma } = useContext(IdiomaContext);
 
     function irAInicio() {
         navegar('/');
+    }
+
+    function manejarIdioma(nuevoIdioma){
+        cambiarIdioma(nuevoIdioma);
     }
 
     return (
@@ -22,12 +30,7 @@ const Cabecera = () => {
                     <div className="collapse navbar-collapse" id="mynavbar">
                         <div className="navbar-nav d-flex align-items-center gap-2">
                             <h1 className="titulocabecera">Marca Personal FP</h1>
-                            <a className="nav-link" href="#">
-                                <img src="src/assets/flag-for-flag-spain-svgrepo-com.svg" alt="Bandera Española" className="imagenIconos" />
-                            </a>
-                            <a className="nav-link" href="#">
-                                <img src="src/assets/united-kingdom-uk-svgrepo-com.svg" alt="Bandera Inglesa" className="imagenIconos" />
-                            </a>
+                            <BotonIdiomas manejarIdioma={manejarIdioma}></BotonIdiomas>
                         </div>
                     </div>
                 </div>
