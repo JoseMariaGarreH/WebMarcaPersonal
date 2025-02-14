@@ -20,8 +20,8 @@
     border: 4px solid grey;
 }
 
-.img-temas:hover{
-    border: 4px solid #364f59
+.carta-temas:hover .img-temas{
+    border: 4px solid #364f59;
 }
 
 @keyframes elevar-arriba {
@@ -30,7 +30,7 @@
         opacity: 0;
     }
     100% {       
-        transform: scale(1.05) translateY(-140px);
+        transform: scale(1.05) translateY(-20px);
         background-color: #8f7159;
         opacity: 0.9;
     }

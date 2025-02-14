@@ -1,10 +1,12 @@
 import { useContext } from 'react';
 import './Pie.css';
 import IdiomaContext from '../../contextos/IdiomaContext';
+import useCount from '../../hooks/useCount';
 
 const Pie = () => {
 
     const { idioma } = useContext(IdiomaContext);
+    const counts = useCount();
 
     return (
         <>
@@ -14,15 +16,15 @@ const Pie = () => {
                         <div className="row">
                             <div className="col-12 col-md-3">
                                 <h5 className="font-weight-bold" >{idioma.temas.op1}</h5>
-                                <h2 className="font-weight-bold">0</h2>
+                                <h2 className="font-weight-bold">{counts.listaCounts[2]}</h2>
                             </div>
                             <div className="col-12 col-md-3 mx-auto">
                                 <h5 className="font-weight-bold">{idioma.temas.op2}</h5>
-                                <h2 className="font-weight-bold">0</h2>
+                                <h2 className="font-weight-bold">{counts.listaCounts[1]}</h2>
                             </div>
                             <div className="col-12 col-md-3">
                                 <h5 className="font-weight-bold">{idioma.temas.op3}</h5>
-                                <h2 className="font-weight-bold">0</h2>
+                                <h2 className="font-weight-bold">{counts.listaCounts[0]}</h2>
                             </div>
                         </div>
                     </div>
