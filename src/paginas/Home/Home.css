@@ -1,11 +1,13 @@
 .carta-temas{
     margin-top: 5%;
     margin-bottom: 5%;
+    transition: transform 0.7s ease;
 }
 
 .texto-elevado{
     opacity: 0;
     color: #ffeace;
+    transition: opacity 0.7s ease, background-color 0.7s ease, transform 0.7s ease;
 }
 
 .carta-temas:hover{
@@ -13,26 +15,16 @@
 }
 
 .carta-temas:hover .texto-elevado{
-    animation: elevar-arriba 0.7s ease both;
+    opacity: 1;       
+    background-color: #8f7159;
+    transform: scale(1.01) translateY(-20px);
 }
 
 .img-temas{
     border: 4px solid grey;
+    transition: border 0.7s ease;
 }
 
 .carta-temas:hover .img-temas{
     border: 4px solid #364f59;
 }
-
-@keyframes elevar-arriba {
-    0% {
-        transform: translateY(0);
-        opacity: 0;
-    }
-    100% {       
-        transform: scale(1.05) translateY(-20px);
-        background-color: #8f7159;
-        opacity: 0.9;
-    }
-}
-
