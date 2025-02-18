@@ -13,22 +13,22 @@ function App() {
 
   const [idiomaElegido, setIdiomaElegido] = useState("es");
 
-    function cambiarIdioma(nuevoIdioma){
-        setIdiomaElegido(nuevoIdioma);
-    }
+  function cambiarIdioma(nuevoIdioma) {
+    setIdiomaElegido(nuevoIdioma);
+  }
 
   return (
-    <div className="container">
+    <>
       <IdiomaContext.Provider value={{ idioma: idiomas[idiomaElegido], cambiarIdioma }}>
-      <Cabecera></Cabecera>
-        <Routes>
-          <Route path='/' element={<Home></Home>}></Route>
-          <Route path='/empresas' element={<Empresas></Empresas>}></Route>
-          <Route path='/centroeducativo' element={<CentroEducativo></CentroEducativo>}></Route>
-          <Route path='/alumnos' element={<Alumnos></Alumnos>}></Route>
-        </Routes>
+          <Cabecera></Cabecera>
+          <Routes>
+            <Route path='/' element={<Home></Home>}></Route>
+            <Route path='/empresas' element={<Empresas></Empresas>}></Route>
+            <Route path='/centroeducativo' element={<CentroEducativo></CentroEducativo>}></Route>
+            <Route path='/alumnos' element={<Alumnos></Alumnos>}></Route>
+          </Routes>
       </IdiomaContext.Provider>
-    </div>
+    </>
   )
 }
 

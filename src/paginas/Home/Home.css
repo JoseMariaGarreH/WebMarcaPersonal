@@ -7,7 +7,7 @@
 .texto-elevado{
     opacity: 0;
     color: #ffeace;
-    transition: opacity 0.7s ease, background-color 0.7s ease, transform 0.7s ease;
+    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .carta-temas:hover{
@@ -22,8 +22,14 @@
 
 .img-temas{
     border: 4px solid grey;
-    transition: border 0.7s ease;
+    transition: border 0.7s ease-in-out;
 }
+
+.img-fluid{
+    max-width: 100%;
+    height: 100%;
+}
+
 
 .carta-temas:hover .img-temas{
     border: 4px solid #364f59;
