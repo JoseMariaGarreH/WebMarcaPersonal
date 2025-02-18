@@ -10,8 +10,8 @@ const Pie = () => {
 
     return (
         <>
-            <div className='container-fluid'>
-                <div className="row">
+            <div className="row">
+                <div className='col-12'>
                     <footer className="fondofooter">
                         <div className="text-center fondosegundofooter">
                             <div className="row">

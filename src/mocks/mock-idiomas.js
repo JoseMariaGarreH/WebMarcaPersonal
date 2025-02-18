@@ -4,7 +4,8 @@ const idiomas = {
     temas: {
       op1: "Empresas",
       op2: "Proyectos",
-      op3: "Alumnos"
+      op3: "Alumnos",
+      op4:"Centro Educativo"
     },
     pie: {
       op1: "Diseño Web",
@@ -15,7 +16,8 @@ const idiomas = {
     temas: {
       op1: "Companies",
       op2: "Projects",
-      op3: "Students"
+      op3: "Students",
+      op4:"Educational Center"
     },
     pie: {
       op1: "Web Design",

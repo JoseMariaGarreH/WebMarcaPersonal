@@ -25,11 +25,6 @@
     transition: border 0.7s ease-in-out;
 }
 
-.img-fluid{
-    max-width: 100%;
-    height: 100%;
-}
-
 
 .carta-temas:hover .img-temas{
     border: 4px solid #364f59;
