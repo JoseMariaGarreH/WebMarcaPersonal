@@ -3,6 +3,7 @@ import { useContext } from "react";
 import './Cabecera.css';
 import BotonIdiomas from "../BotonIdiomas";
 import IdiomaContext from "../../contextos/IdiomaContext";
+import logoNaranja from "../../img/mp-logoNaranja100.png";
 
 const Cabecera = () => {
 
@@ -22,7 +23,7 @@ const Cabecera = () => {
             <div className="col-12">
                 <nav className="navbar navbar-expand-md">
                     <a className="navbar-brand" onClick={irAInicio}>
-                        <img src="src/img/mp-logoNaranja100.png" alt="Logo" className="logoCabecera d-inline-block align-text-top" ></img>
+                        <img src={logoNaranja}alt="Logo" className="logoCabecera d-inline-block align-text-top" ></img>
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                         <span className="navbar-toggler-icon"></span>

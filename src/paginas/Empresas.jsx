@@ -1,16 +1,16 @@
-import { Routes,Route, Outlet } from "react-router-dom";
+import { Routes,Route } from "react-router-dom";
 import MenuEmpresa from "../componentes/MenuEmpresa/MenuEmpresa";
-
+import BusquedaProyectos from "./BusquedaProyectos";
+import BusquedaAlumnos from "./BusquedaAlumnos";
 
 const Empresas = () => {
     return (
         <>
             <MenuEmpresa></MenuEmpresa>
-            {/*<Routes>
-                <Route path='/empresa/proyectos' element={<BusquedaProyectos></BusquedaProyectos>}></Route>
-                <Route path='/empresa/alumnos' element={<BusquedaAlumnos></BusquedaAlumnos>}></Route>
-            </Routes>*/}
-            <Outlet />
+            <Routes>
+                <Route path='/proyectos' element={<BusquedaProyectos></BusquedaProyectos>}></Route>
+                <Route path='/alumnos' element={<BusquedaAlumnos></BusquedaAlumnos>}></Route>
+            </Routes>
         </>
     )
 }

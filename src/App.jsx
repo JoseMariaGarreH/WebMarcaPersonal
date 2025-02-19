@@ -8,8 +8,6 @@ import Cabecera from './componentes/Cabecera/Cabecera'
 import IdiomaContext from './contextos/IdiomaContext'
 import { useState } from 'react'
 import idiomas from './mocks/mock-idiomas'
-import BusquedaProyectos from "./paginas/BusquedaProyectos";
-import BusquedaAlumnos from "./paginas/BusquedaAlumnos";
 
 function App() {
 
@@ -29,8 +27,7 @@ function App() {
               <Route path='/empresa/*' element={<Empresa></Empresa>}></Route>
               <Route path='/centroeducativo' element={<CentroEducativo></CentroEducativo>}></Route>
               <Route path='/alumnos' element={<Alumnos></Alumnos>}></Route>
-              <Route path='/empresa/proyectos' element={<BusquedaProyectos></BusquedaProyectos>}></Route>
-              <Route path='/empresa/alumnos' element={<BusquedaAlumnos></BusquedaAlumnos>}></Route>
+              
             </Routes>
           </div>
       </IdiomaContext.Provider>

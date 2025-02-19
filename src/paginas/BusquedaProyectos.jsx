@@ -4,7 +4,6 @@ import MenuEmpresa from "../componentes/MenuEmpresa/MenuEmpresa";
 const BusquedaProyectos = () => {
     return (
         <>
-            <MenuEmpresa></MenuEmpresa>
             <ListaFamiliaProfesionales></ListaFamiliaProfesionales>
         </>
     );

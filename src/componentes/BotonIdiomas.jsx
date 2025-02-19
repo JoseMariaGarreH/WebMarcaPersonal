@@ -1,3 +1,6 @@
+import banderaEsp from '../assets/flag-for-flag-spain-svgrepo-com.svg';
+import banderaGb from '../assets/united-kingdom-uk-svgrepo-com.svg';
+
 const BotonIdiomas = (props) => {
 
     function asignarIdioma(idioma) {
@@ -7,10 +10,10 @@ const BotonIdiomas = (props) => {
     return (
         <>
             <a className="nav-link" onClick={() => asignarIdioma("es")}>
-                <img src="src/assets/flag-for-flag-spain-svgrepo-com.svg" alt="Bandera Española" className="imagenIconos" />
+                <img src={banderaEsp} alt="Bandera Española" className="imagenIconos" />
             </a>
             <a className="nav-link" onClick={() => asignarIdioma("gb")}>
-                <img src="src/assets/united-kingdom-uk-svgrepo-com.svg" alt="Bandera Inglesa" className="imagenIconos" />
+                <img src={banderaGb} alt="Bandera Inglesa" className="imagenIconos" />
             </a>
         </>
     )
