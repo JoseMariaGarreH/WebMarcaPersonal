@@ -9,3 +9,8 @@ a {
 .navbar {
     background-color: #ffeace;
 }
+
+ul{
+    list-style: none;
+    padding: 0;
+}

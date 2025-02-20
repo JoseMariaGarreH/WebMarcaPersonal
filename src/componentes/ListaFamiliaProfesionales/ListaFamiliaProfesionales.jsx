@@ -28,7 +28,7 @@ const ListaFamiliaProfesionales = () => {
                                 <div className="card-custom">
                                     {listaFamiliaProfesionales.map(familiaProfesional => (
                                         <div key={familiaProfesional.id}>
-                                            <input type="checkbox" className="btn-check" id={`btn-check-${familiaProfesional.id}`} autoComplete="off" />
+                                            <input type="checkbox" className="btn-check" id={`btn-check-${familiaProfesional.id}`} autoComplete="off"/>
                                             <label className="btn btn-primary" htmlFor={`btn-check-${familiaProfesional.id}`} data-mdb-button-init data-mdb-ripple-init>
                                                 {familiaProfesional.nombre}
                                             </label>
