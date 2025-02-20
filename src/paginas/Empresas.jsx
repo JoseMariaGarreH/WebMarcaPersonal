@@ -15,4 +15,4 @@ const Empresas = () => {
     )
 }
 
-export default Empresas;
+export default Empresas; 
