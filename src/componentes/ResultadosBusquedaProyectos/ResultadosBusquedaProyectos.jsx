@@ -1,7 +1,7 @@
 import useProyectos from "../../hooks/useProyectos";
 import ProyectoMinCard from "../ProyectoMinCard/ProyectoMinCard";
 
-const ResultadosBusquedaProyectos = () => {
+const ResultadosBusquedaProyectos = (props) => {
 
     const { listaProyectos } = useProyectos();
 
@@ -9,6 +9,17 @@ const ResultadosBusquedaProyectos = () => {
         return <ProyectoMinCard className="col-4" key={proyecto.id} nombre={proyecto.nombre} ciclos={proyecto.ciclos} 
                                 docente_id={proyecto.docente_id} participantes={proyecto.participantes}>
                 </ProyectoMinCard>
+    }
+
+
+    console.log(props.listaFamilias);
+
+    function filtrarListaProyectos(proyecto){
+        for (let i = 0; i < proyecto.ciclos.length; i++) {
+            if(props.listaFamilias.some(familia => familia.id === proyecto.ciclos[i].familia_profesional_id)){
+                return true;
+            }
+        }
     }
 
     return(
@@ -22,7 +33,7 @@ const ResultadosBusquedaProyectos = () => {
                             </div>
                             <div className="card-text">
                                 <div className="row">
-                                    {listaProyectos.map(manejarProyectos)}
+                                    {listaProyectos.filter(filtrarListaProyectos).map(manejarProyectos)}
                                 </div>
                             </div>
                         </div>

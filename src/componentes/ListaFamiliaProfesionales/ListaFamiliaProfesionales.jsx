@@ -3,15 +3,19 @@ import "./ListaFamiliaProfesionales.css";
 import flecha from "../../assets/caretupminor-svgrepo-com.svg";
 import { useState } from "react";
 
-const ListaFamiliaProfesionales = () => {
+const ListaFamiliaProfesionales = (props) => {
 
     const { listaFamiliaProfesionales } = useFamiliasProfesionales();
     const [pulsado, setPulsado] = useState(false);
 
+    function manejarCheckBox(familiaProfesional){
+        props.setListaFamilias(props.listaFamilias.concat(familiaProfesional));
+    }
+
     function manejarFamiliasProfesionales(familiaProfesional) {
         return (
             <div key={familiaProfesional.id}>
-                <input type="checkbox" className="btn-check" id={`btn-check-${familiaProfesional.id}`} autoComplete="off" />
+                <input type="checkbox" className="btn-check" id={`btn-check-${familiaProfesional.id}`} autoComplete="off" onChange={() => manejarCheckBox(familiaProfesional)}/>
                 <label className="btn btn-primary" htmlFor={`btn-check-${familiaProfesional.id}`} data-mdb-button-init data-mdb-ripple-init>
                     {familiaProfesional.nombre}
                 </label>
