@@ -6,7 +6,18 @@ import { useState } from "react";
 const ListaFamiliaProfesionales = () => {
 
     const { listaFamiliaProfesionales } = useFamiliasProfesionales();
-    const [pulsado,setPulsado] = useState(false);
+    const [pulsado, setPulsado] = useState(false);
+
+    function manejarFamiliasProfesionales(familiaProfesional) {
+        return (
+            <div key={familiaProfesional.id}>
+                <input type="checkbox" className="btn-check" id={`btn-check-${familiaProfesional.id}`} autoComplete="off" />
+                <label className="btn btn-primary" htmlFor={`btn-check-${familiaProfesional.id}`} data-mdb-button-init data-mdb-ripple-init>
+                    {familiaProfesional.nombre}
+                </label>
+            </div>
+        )
+    }
 
     function manejarPulsacion() {
         setPulsado(!pulsado);
@@ -21,19 +32,12 @@ const ListaFamiliaProfesionales = () => {
                     </div>
                     <div className="card-body">
                         <button className="btn btn-outline-light w-100" type="button" data-bs-toggle="collapse" data-bs-target="#filtro" onClick={manejarPulsacion}>
-                            Filtrar por familias profesionales <img src={flecha} alt="Caret Up" className={`rotacion ${pulsado ? 'rotacion-activada' : ''}`} /> 
+                            Filtrar por familias profesionales <img src={flecha} alt="flecha" className={`rotacion ${pulsado ? 'rotacion-activada' : ''}`} />
                         </button>
                         <div className="collapse" id="filtro">
                             <div className="card card-body">
                                 <div className="card-custom">
-                                    {listaFamiliaProfesionales.map(familiaProfesional => (
-                                        <div key={familiaProfesional.id}>
-                                            <input type="checkbox" className="btn-check" id={`btn-check-${familiaProfesional.id}`} autoComplete="off"/>
-                                            <label className="btn btn-primary" htmlFor={`btn-check-${familiaProfesional.id}`} data-mdb-button-init data-mdb-ripple-init>
-                                                {familiaProfesional.nombre}
-                                            </label>
-                                        </div>
-                                    ))}
+                                    {listaFamiliaProfesionales.map(manejarFamiliasProfesionales)}
                                 </div>
                             </div>
                         </div>

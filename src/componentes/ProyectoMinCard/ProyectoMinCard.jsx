@@ -3,7 +3,7 @@ import './ProyectoMinCard.css';
 const ProyectoMinCard = (props) => {
 
     function manejarCiclos(ciclo) {
-        return <li className="small" data-bs-toggle="tooltip" title={ciclo.nombre} key={ciclo.id}>{ciclo.codCiclo}</li>
+        return <li className="list-group-item small p-1" data-bs-toggle="tooltip" title={ciclo.nombre} key={ciclo.id}>{ciclo.codCiclo}</li>
     }
 
     function manejarParticipantes(participante) {
@@ -27,7 +27,7 @@ const ProyectoMinCard = (props) => {
                                 <div className="d-flex justify-content-start rounded-3 p-2 bg-body-tertiary">
                                     <div>
                                         <p className="small text-muted mb-1">Ciclos</p>
-                                        <ul>{props.ciclos.map(manejarCiclos)}</ul>
+                                        <ul className="list-group list-group-horizontal">{props.ciclos.map(manejarCiclos)}</ul>
                                     </div>
                                     <div className="px-3">
                                         <p className="small text-muted mb-1">Tutor</p>

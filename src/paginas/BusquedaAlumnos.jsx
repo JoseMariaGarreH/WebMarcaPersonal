@@ -4,6 +4,7 @@ const BusquedaAlumnos = () => {
 
     return (
         <>
+            <MenuEmpresa></MenuEmpresa>
         </>
     )   
 }
