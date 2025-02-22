@@ -12,7 +12,7 @@ npm install react-router-dom
 npm install react-hook-form
 ```
 
-## Uso
+## Ejecución
 
 Después de instalar las dependencias, puedes iniciar el proyecto con:
 
