@@ -6,20 +6,22 @@ const ResultadosBusquedaProyectos = (props) => {
     const { listaProyectos } = useProyectos();
 
     function manejarProyectos(proyecto){
-        return <ProyectoMinCard className="col-4" key={proyecto.id} nombre={proyecto.nombre} ciclos={proyecto.ciclos} 
+        return <ProyectoMinCard key={proyecto.id} nombre={proyecto.nombre} ciclos={proyecto.ciclos} 
                                 docente_id={proyecto.docente_id} participantes={proyecto.participantes}>
                 </ProyectoMinCard>
     }
 
-
     console.log(props.listaFamilias);
 
     function filtrarListaProyectos(proyecto){
-        for (let i = 0; i < proyecto.ciclos.length; i++) {
-            if(props.listaFamilias.some(familia => familia.id === proyecto.ciclos[i].familia_profesional_id)){
-                return true;
+        for (let i = 0; i < props.listaFamilias.length; i++) {
+            for (let j = 0; j < proyecto.ciclos.length; j++) {
+                if (proyecto.ciclos[j].familia_id === props.listaFamilias[i].id) {
+                    return true;
+                }
             }
         }
+        return false;
     }
 
     return(

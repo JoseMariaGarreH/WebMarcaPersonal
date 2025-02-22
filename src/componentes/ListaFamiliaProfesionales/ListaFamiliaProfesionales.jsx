@@ -8,14 +8,18 @@ const ListaFamiliaProfesionales = (props) => {
     const { listaFamiliaProfesionales } = useFamiliasProfesionales();
     const [pulsado, setPulsado] = useState(false);
 
-    function manejarCheckBox(familiaProfesional){
-        props.setListaFamilias(props.listaFamilias.concat(familiaProfesional));
+    function manejarCheckBox(familiaProfesional,event){
+        if(event.target.checked){
+            props.setListaFamilias(props.listaFamilias.concat(familiaProfesional));
+        } else {
+            props.setListaFamilias(props.listaFamilias.filter((familia) => familia.id !== familiaProfesional.id));
+        }
     }
 
     function manejarFamiliasProfesionales(familiaProfesional) {
         return (
             <div key={familiaProfesional.id}>
-                <input type="checkbox" className="btn-check" id={`btn-check-${familiaProfesional.id}`} autoComplete="off" onChange={() => manejarCheckBox(familiaProfesional)}/>
+                <input type="checkbox" className="btn-check" id={`btn-check-${familiaProfesional.id}`} autoComplete="off" onChange={(event) => manejarCheckBox(familiaProfesional,event)}/>
                 <label className="btn btn-primary" htmlFor={`btn-check-${familiaProfesional.id}`} data-mdb-button-init data-mdb-ripple-init>
                     {familiaProfesional.nombre}
                 </label>
