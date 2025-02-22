@@ -12,7 +12,7 @@ const ProyectoMinCard = (props) => {
 
     return (
         <>
-            <div className="col-12 col-md-4">
+            <div className="col-12 col-sm-12 col-md-4">
                 <div className="card card-fondo">
                     <div className="card-body p-4">
                         <div className="d-flex">

@@ -35,7 +35,9 @@ const ResultadosBusquedaProyectos = (props) => {
                             </div>
                             <div className="card-text">
                                 <div className="row">
-                                    {listaProyectos.filter(filtrarListaProyectos).map(manejarProyectos)}
+                                    {(props.listaFamilias.length === 0) ? 
+                                    listaProyectos.map(manejarProyectos) : 
+                                    listaProyectos.filter(filtrarListaProyectos).map(manejarProyectos)}
                                 </div>
                             </div>
                         </div>
