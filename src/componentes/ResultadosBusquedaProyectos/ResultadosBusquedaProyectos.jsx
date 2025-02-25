@@ -1,17 +1,17 @@
 import useProyectos from "../../hooks/useProyectos";
+import AjaxLoader from "../AjaxLoader/AjaxLoader";
 import ProyectoMinCard from "../ProyectoMinCard/ProyectoMinCard";
+
 
 const ResultadosBusquedaProyectos = (props) => {
 
-    const { listaProyectos } = useProyectos();
+    const { buscando,listaProyectos } = useProyectos();
 
     function manejarProyectos(proyecto){
         return <ProyectoMinCard key={proyecto.id} nombre={proyecto.nombre} ciclos={proyecto.ciclos} 
                                 docente_id={proyecto.docente_id} participantes={proyecto.participantes}>
                 </ProyectoMinCard>
     }
-
-    console.log(props.listaFamilias);
 
     function filtrarListaProyectos(proyecto){
         for (let i = 0; i < props.listaFamilias.length; i++) {
@@ -24,6 +24,12 @@ const ResultadosBusquedaProyectos = (props) => {
         return false;
     }
 
+    function lanzarProyectos(){
+        return (props.listaFamilias.length === 0) ? 
+        listaProyectos.map(manejarProyectos) : 
+        listaProyectos.filter(filtrarListaProyectos).map(manejarProyectos);
+    }
+
     return(
         <>
             <div className="row">
@@ -31,13 +37,11 @@ const ResultadosBusquedaProyectos = (props) => {
                     <div className="card">
                         <div className="card-body">
                             <div className="card-header">
-                                <h5 className="mb-0">Resultados</h5>
+                                <h5 className="mb-0">{props.idioma.proyectos.op3}</h5>
                             </div>
                             <div className="card-text">
                                 <div className="row">
-                                    {(props.listaFamilias.length === 0) ? 
-                                    listaProyectos.map(manejarProyectos) : 
-                                    listaProyectos.filter(filtrarListaProyectos).map(manejarProyectos)}
+                                    { buscando ? lanzarProyectos() : <AjaxLoader></AjaxLoader>  }
                                 </div>
                             </div>
                         </div>

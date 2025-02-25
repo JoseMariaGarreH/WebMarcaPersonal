@@ -7,10 +7,15 @@ const idiomas = {
       op3: "Alumnos",
       op4:"Centro Educativo"
     },
+    proyectos:{
+      op1: "Búsqueda de Proyectos",
+      op2: "Filtrar por familias profesionales",
+      op3: "Resultados",
+    },
     pie: {
       op1: "Diseño Web",
       op2: "Desarrollo de Aplicaciones Web"
-    }
+    },
   },
   "gb": {
     temas: {
@@ -18,6 +23,11 @@ const idiomas = {
       op2: "Projects",
       op3: "Students",
       op4:"Educational Center"
+    },
+    proyectos:{
+      op1: "Project Search",
+      op2: "Filter by professional families",
+      op3: "Results",
     },
     pie: {
       op1: "Web Design",

@@ -6,11 +6,12 @@ a {
     text-decoration: none;
 }
 
-.navbar {
-    background-color: #ffeace;
-}
-
 ul{
     list-style: none;
     padding: 0;
 }
+
+.navbar {
+    background-color: #ffeace;
+}
+

@@ -36,11 +36,11 @@ const ListaFamiliaProfesionales = (props) => {
             <div className="col-12">
                 <div className="card">
                     <div className="card-header">
-                        <h5 className="mb-0">Búsqueda de Proyectos</h5>
+                        <h5 className="mb-0">{props.idioma.proyectos.op1}</h5>
                     </div>
                     <div className="card-body">
                         <button className="btn btn-outline-light w-100" type="button" data-bs-toggle="collapse" data-bs-target="#filtro" onClick={manejarPulsacion}>
-                            Filtrar por familias profesionales <img src={flecha} alt="flecha" className={`rotacion ${pulsado ? 'rotacion-activada' : ''}`} />
+                        {props.idioma.proyectos.op2} <img src={flecha} alt="flecha" className={`rotacion ${pulsado ? 'rotacion-activada' : ''}`} />
                         </button>
                         <div className="collapse" id="filtro">
                             <div className="card card-body">
