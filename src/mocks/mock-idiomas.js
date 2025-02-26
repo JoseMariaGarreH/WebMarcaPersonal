@@ -12,6 +12,11 @@ const idiomas = {
       op2: "Filtrar por familias profesionales",
       op3: "Resultados",
     },
+    alumnos:{
+      op1: "Búsqueda de Alumnos",
+      op2: "Filtrar por perfil competencial",
+      op3: "Resultados",
+    },
     pie: {
       op1: "Diseño Web",
       op2: "Desarrollo de Aplicaciones Web"
@@ -27,6 +32,11 @@ const idiomas = {
     proyectos:{
       op1: "Project Search",
       op2: "Filter by professional families",
+      op3: "Results",
+    },
+    alumnos:{
+      op1: "Student Search",
+      op2: "Filter by competency profile",
       op3: "Results",
     },
     pie: {

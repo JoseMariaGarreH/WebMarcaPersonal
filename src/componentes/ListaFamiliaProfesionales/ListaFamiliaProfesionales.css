@@ -1,35 +1,8 @@
-.card{
-  background-color: #8f7159;
-}
-
-.card-header{
-  background-color: #8f7159;
-  color: white;
-}
-
-.card-custom {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card-custom div {
-  margin: 0.5%;
-}
-
-.btn-primary{
-  background-color: #364f59;
-  border: 1px solid #364f59;
-  box-shadow: 0 0 0 0.2rem rgba(54, 79, 89, 0.5);
-}
-
-.rotacion {
+.rotacion-familia {
   width: 30px;
   transition: transform 0.5s ease-in-out;
 }
 
-.rotacion-activada{
+.rotacion-activada-familia {
   transform: rotate(180deg);
 }
-
-
-

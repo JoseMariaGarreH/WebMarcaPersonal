@@ -43,7 +43,7 @@ const ListaFamiliaProfesionales = (props) => {
                     </div>
                     <div className="card-body">
                         <button className="btn btn-outline-light w-100" type="button" data-bs-toggle="collapse" data-bs-target="#filtro" onClick={manejarPulsacion}>
-                        {idioma.proyectos.op2} <img src={flecha} alt="flecha" className={`rotacion ${pulsado ? 'rotacion-activada' : ''}`} />
+                        {idioma.proyectos.op2} <img src={flecha} alt="flecha" className={`rotacion-familia ${pulsado ? 'rotacion-activada-familia' : ''}`} />
                         </button>
                         <div className="collapse" id="filtro">
                             <div className="card card-body">

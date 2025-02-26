@@ -1,5 +1,6 @@
+import ListaPerfilesCompetenciales from "../componentes/ListaPerfilesCompetenciales/ListaPerfilesCompetenciales";
 import MenuEmpresa from "../componentes/MenuEmpresa/MenuEmpresa";
-import ListaFamiliaProfesionales from "../componentes/ListaFamiliaProfesionales/ListaFamiliaProfesionales"
+import ResultadosBusquedaAlumnos from "../componentes/ResultadosBusquedaAlumnos/ResultadosBusquedaAlumnos";
 
 const BusquedaAlumnos = () => {
 
@@ -7,7 +8,8 @@ const BusquedaAlumnos = () => {
     return (
         <>
             <MenuEmpresa></MenuEmpresa>
-            <ListaFamiliaProfesionales></ListaFamiliaProfesionales>
+            <ListaPerfilesCompetenciales></ListaPerfilesCompetenciales>
+            <ResultadosBusquedaAlumnos></ResultadosBusquedaAlumnos>
         </>
     )   
 }
