@@ -1,11 +1,14 @@
+import { useContext } from "react";
 import useProyectos from "../../hooks/useProyectos";
 import AjaxLoader from "../AjaxLoader/AjaxLoader";
 import ProyectoMinCard from "../ProyectoMinCard/ProyectoMinCard";
+import IdiomaContext from "../../contextos/IdiomaContext";
 
 
 const ResultadosBusquedaProyectos = (props) => {
 
     const { buscando,listaProyectos } = useProyectos();
+    const { idioma } =  useContext(IdiomaContext);
 
     function manejarProyectos(proyecto){
         return <ProyectoMinCard key={proyecto.id} nombre={proyecto.nombre} ciclos={proyecto.ciclos} 
@@ -37,7 +40,7 @@ const ResultadosBusquedaProyectos = (props) => {
                     <div className="card">
                         <div className="card-body">
                             <div className="card-header">
-                                <h5 className="mb-0">{props.idioma.proyectos.op3}</h5>
+                                <h5 className="mb-0">{idioma.proyectos.op3}</h5>
                             </div>
                             <div className="card-text">
                                 <div className="row">
