@@ -1,4 +1,5 @@
 import './ProyectoMinCard.css';
+import proyectos from '../../img/proyectos.jpg';
 
 const ProyectoMinCard = (props) => {
 
@@ -17,7 +18,7 @@ const ProyectoMinCard = (props) => {
                     <div className="card-body p-4">
                         <div className="d-flex">
                             <div className="flex-shrink-0">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                                <img src={proyectos}
                                     alt="Generic placeholder image" className="img-fluid retoque-imagen" />
                             </div>
                             <div className="flex-grow-1 ms-3">

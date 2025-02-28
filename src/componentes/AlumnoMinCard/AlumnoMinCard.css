@@ -8,11 +8,6 @@
     margin: 2%;
 }
 
-.retoque-imagen{
-    width: 120px;
-    border-radius: 10px;
-}
-
 .text-area-custom{
     resize: none;
     overflow: hidden;

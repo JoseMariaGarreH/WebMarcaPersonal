@@ -5,7 +5,7 @@ import './ResultadosBusquedaAlumnos.css';
 import IdiomaContext from "../../contextos/IdiomaContext";
 import AjaxLoader from "../AjaxLoader/AjaxLoader";
 
-const ResultadosBusquedaAlumnos = () =>{
+const ResultadosBusquedaAlumnos = (props) =>{
 
     const { idioma} = useContext(IdiomaContext);
     const { buscando , listaAlumnos } = useAlumnos();
@@ -16,6 +16,27 @@ const ResultadosBusquedaAlumnos = () =>{
                 </AlumnoMinCard>;
     }
 
+    function filtrarListaAlumnosPorFamiliaProfesional(alumno){
+        for (let i = 0; i < props.listaFamilias.length; i++) {
+            for (let j = 0; j < alumno.ciclos.length; j++) {
+                if (alumno.ciclos[j].familia_id === props.listaFamilias[i].id) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    function filtrarListaAlumnosPorPerfilCompetencial(alumno){
+        for (let i = 0; i < props.listaPerfiles.length; i++) {
+            for (let j = 0; j < alumno.competencias.length; j++) {
+                if (alumno.competencias[j].id === props.listaPerfiles[i].id) {
+                    return true;
+                }
+            }
+        }
+        return false
+    }
 
     return(
         <>
@@ -28,7 +49,15 @@ const ResultadosBusquedaAlumnos = () =>{
                             </div>
                             <div className="card-text">
                                 <div className="row">
-                                    { buscando ? listaAlumnos.map(manejarAlumnos) : <AjaxLoader></AjaxLoader>  }
+                                    { buscando ?  <AjaxLoader></AjaxLoader> : "" }
+                                    {props.listaPerfiles.length === 0 && props.listaFamilias.length === 0 ? 
+                                    listaAlumnos.map(manejarAlumnos) : 
+                                    listaAlumnos
+                                        .filter(alumno => 
+                                            (props.listaPerfiles.length === 0 || filtrarListaAlumnosPorPerfilCompetencial(alumno)) &&
+                                            (props.listaFamilias.length === 0 || filtrarListaAlumnosPorFamiliaProfesional(alumno))
+                                        )
+                                        .map(manejarAlumnos)}
                                 </div>
                             </div>
                         </div>

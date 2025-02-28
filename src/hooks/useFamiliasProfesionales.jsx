@@ -13,7 +13,7 @@ const useFamiliasProfesionales = () =>  {
 
     useEffect(obtenerFamiliasProfesionales, []);
 
-    return {listaFamiliaProfesionales}
+    return { listaFamiliaProfesionales }
 }
 
 export default useFamiliasProfesionales;

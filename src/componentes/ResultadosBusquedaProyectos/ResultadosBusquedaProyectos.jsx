@@ -7,16 +7,16 @@ import IdiomaContext from "../../contextos/IdiomaContext";
 
 const ResultadosBusquedaProyectos = (props) => {
 
-    const { buscando,listaProyectos } = useProyectos();
-    const { idioma } =  useContext(IdiomaContext);
+    const { buscando, listaProyectos } = useProyectos();
+    const { idioma } = useContext(IdiomaContext);
 
-    function manejarProyectos(proyecto){
-        return <ProyectoMinCard key={proyecto.id} nombre={proyecto.nombre} ciclos={proyecto.ciclos} 
-                                docente_id={proyecto.docente_id} participantes={proyecto.participantes}>
-                </ProyectoMinCard>
+    function manejarProyectos(proyecto) {
+        return <ProyectoMinCard key={proyecto.id} nombre={proyecto.nombre} ciclos={proyecto.ciclos}
+            docente_id={proyecto.docente_id} participantes={proyecto.participantes}>
+        </ProyectoMinCard>
     }
 
-    function filtrarListaProyectos(proyecto){
+    function filtrarListaProyectos(proyecto) {
         for (let i = 0; i < props.listaFamilias.length; i++) {
             for (let j = 0; j < proyecto.ciclos.length; j++) {
                 if (proyecto.ciclos[j].familia_id === props.listaFamilias[i].id) {
@@ -27,13 +27,7 @@ const ResultadosBusquedaProyectos = (props) => {
         return false;
     }
 
-    function lanzarProyectos(){
-        return (props.listaFamilias.length === 0) ? 
-        listaProyectos.map(manejarProyectos) : 
-        listaProyectos.filter(filtrarListaProyectos).map(manejarProyectos);
-    }
-
-    return(
+    return (
         <>
             <div className="row">
                 <div className="col-12">
@@ -44,7 +38,10 @@ const ResultadosBusquedaProyectos = (props) => {
                             </div>
                             <div className="card-text">
                                 <div className="row">
-                                    { buscando ? lanzarProyectos() : <AjaxLoader></AjaxLoader>  }
+                                    {buscando ? <AjaxLoader></AjaxLoader> : ""}
+                                    {(props.listaFamilias.length === 0) ?
+                                        listaProyectos.map(manejarProyectos) :
+                                        listaProyectos.filter(filtrarListaProyectos).map(manejarProyectos)}
                                 </div>
                             </div>
                         </div>
@@ -52,7 +49,7 @@ const ResultadosBusquedaProyectos = (props) => {
                 </div>
             </div>
         </>
-    )   
+    )
 
 }
 

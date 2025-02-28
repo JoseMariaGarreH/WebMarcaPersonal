@@ -8,11 +8,11 @@ const useProyectos = () => {
 
     function obtenerProyectos(){
 
-        setBuscando(false);
+        setBuscando(true);
 
         getProyectos().then(proyecto => {
             setListaProyectos(proyecto);
-            setBuscando(true);
+            setBuscando(false);
         });               
     }
 

@@ -9,11 +9,11 @@ const useAlumnos = () =>{
 
     function loadAlumnos(){
 
-        setBuscando(false);
+        setBuscando(true);
 
         getAlumnos().then(alumnos => {
             setListaAlumnos(alumnos);
-            setBuscando(true);
+            setBuscando(false);
         });
     }
 

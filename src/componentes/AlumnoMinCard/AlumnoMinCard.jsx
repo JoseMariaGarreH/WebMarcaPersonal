@@ -1,4 +1,5 @@
 import './AlumnoMinCard.css';
+import persona from '../../img/persona.jpg'
 
 const AlumnoMinCard = (props) => {
 
@@ -8,12 +9,12 @@ const AlumnoMinCard = (props) => {
 
     return (
         <>
-            <div className="col-12 col-sm-12 col-md-4">
+            <div className="col-12 col-sm-6 col-md-4">
                 <div className="card card-fondo">
                     <div className="card-body p-4">
                         <div className="d-flex">
                             <div className="flex-shrink-0">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                                <img src={persona}
                                     alt="Generic placeholder image" className="img-fluid retoque-imagen" />
                             </div>
                             <div className="ms-3">

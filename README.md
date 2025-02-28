@@ -7,7 +7,6 @@ Este proyecto está desarrollado con React.
 Para instalar las dependencias necesarias, ejecuta los siguientes comandos:
 
 ```sh
-npm install
 npm install react-router-dom
 npm install react-hook-form
 ```

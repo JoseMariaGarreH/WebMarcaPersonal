@@ -1,8 +1,0 @@
-.rotacion-familia {
-  width: 30px;
-  transition: transform 0.5s ease-in-out;
-}
-
-.rotacion-activada-familia {
-  transform: rotate(180deg);
-}

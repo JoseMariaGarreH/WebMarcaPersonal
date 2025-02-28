@@ -39,7 +39,20 @@ ul {
     box-shadow: 0 0 0 0.2rem rgba(54, 79, 89, 0.5);
 }
 
-.bg-body-tertiary{
+.bg-body-tertiary {
     color: black;
 }
 
+.rotacion {
+    width: 30px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rotacion-activada {
+    transform: rotate(180deg);
+}
+
+.retoque-imagen{
+    width: 120px;
+    border-radius: 10px;
+}
