@@ -12,7 +12,7 @@ const ResultadosBusquedaAlumnos = (props) =>{
 
     function manejarAlumnos(alumno){
         return <AlumnoMinCard key={alumno.id} nombre={alumno.nombre} apellidos={alumno.apellidos} 
-                                ciclos={alumno.ciclos} curriculo={alumno.curriculo}>
+                                idiomas={alumno.idiomas} ciclos={alumno.ciclos} curriculo={alumno.curriculo}>
                 </AlumnoMinCard>;
     }
 

@@ -25,7 +25,9 @@ const ProyectoMinCard = (props) => {
                                 <h5 className="mb-1">{props.nombre}</h5>
                                 <p className="mb-2 pb-1">Alumnos</p>
                                 <ul>{props.participantes.map(manejarParticipantes)}</ul>
-                                <div className="d-flex justify-content-start rounded-3 p-2 bg-body-tertiary">
+                            </div>
+                        </div>
+                        <div className="d-flex justify-content-start rounded-3 p-2 m-2 bg-body-tertiary">
                                     <div>
                                         <p className="small text-muted mb-1">Ciclos</p>
                                         <ul className="list-group list-group-horizontal">{props.ciclos.map(manejarCiclos)}</ul>
@@ -35,8 +37,6 @@ const ProyectoMinCard = (props) => {
                                         <p className="mb-0">{props.docente_id}</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

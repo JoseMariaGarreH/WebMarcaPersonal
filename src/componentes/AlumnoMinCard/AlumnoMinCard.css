@@ -4,7 +4,7 @@
     color: white;
     box-shadow: 0 0 0 0.2rem rgba(54, 79, 89, 0.5);
     min-height: 95%;
-    min-width: 100%;
+    max-width: 100%;
     margin: 2%;
 }
 
