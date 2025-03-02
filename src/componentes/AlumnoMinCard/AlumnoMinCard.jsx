@@ -25,20 +25,14 @@ const AlumnoMinCard = (props) => {
                     className="me-1"
                 />
                 <span>{idioma.nivel}</span>
-                <span 
-                    className="ms-2" 
-                    data-bs-toggle="tooltip" 
-                    title={certificadoTooltip}
-                >
-                    {certificadoLabel}
-                </span>
+                <span className="ms-2" data-bs-toggle="tooltip" title={certificadoTooltip}>{certificadoLabel}</span>
             </li>
         );
     }
 
     return (
         <>
-            <div className="col-12 col-sm-6 col-md-4">
+            <div className="col-12 col-sm-12 col-md-4">
                 <div className="card card-fondo">
                     <div className="card-body p-4">
                         <div className="d-flex">
