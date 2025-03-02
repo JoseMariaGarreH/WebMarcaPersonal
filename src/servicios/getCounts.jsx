@@ -10,14 +10,7 @@ function getCounts() {
     // Recorremos el array de los endpoints y hacemos una petición a cada uno de ellos
     // Usamos fetch para recuperar los post de la REST API. Puesto que hacemo una petición al servidor
     const request = apiURLs.map( apiURL =>
-            fetch(apiURL, {
-            // Especifica el método HTTP como GET
-            method: 'GET',
-            // Establece los encabezados de la solicitud
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        }).then(response => response.json()) // Maneja la respuesta convirtiéndola a JSON
+            fetch(apiURL).then(response => response.json()) // Maneja la respuesta convirtiéndola a JSON
         .catch(error => console.log("error", error)) // Captura cualquier error que ocurra durante la operación fetch y lo registra en la consola
     )
 

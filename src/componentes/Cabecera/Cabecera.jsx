@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import logoNaranja from "../../img/mp-logoNaranja100.png";
+import { Link } from "react-router-dom";
 import './Cabecera.css';
 
 // -- Componentes -------------------------------------------------
@@ -21,9 +22,9 @@ const Cabecera = () => {
         <div className="row">
             <div className="col-12">
                 <nav className="navbar navbar-expand-md">
-                    <link className="navbar-brand" to="/">
+                    <Link className="navbar-brand" to="/">
                         <img src={logoNaranja}alt="Logo" className="logoCabecera d-inline-block align-text-top" ></img>
-                    </link>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                         <span className="navbar-toggler-icon"></span>
                     </button>
