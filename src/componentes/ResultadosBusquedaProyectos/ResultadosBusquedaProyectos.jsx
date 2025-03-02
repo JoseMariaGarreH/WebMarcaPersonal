@@ -22,18 +22,24 @@ const ResultadosBusquedaProyectos = (props) => {
         </ProyectoMinCard>
     }
 
-    // Recorremos la lista de familias profesionales y la lista de ciclos por el atributo de familia_id 
-    // y comprobamos si el proyecto tiene alguna de las familias profesionales
-    // Recorriendo las dos listas de objetos, si encontramos alguna coincidencia, devolvemos true si no, false
+    
     function filtrarListaProyectos(proyecto) {
+        // Recorremos la lista de familias profesionales y la lista de ciclos por el atributo de familia_id 
+        // y comprobamos si el proyecto tiene alguna de las familias profesionales
+        // Recorriendo las dos listas de objetos, si encontramos alguna coincidencia, devolvemos true si no, false
         for (let i = 0; i < props.listaFamilias.length; i++) {
+            let familiaEncontrada = false;
             for (let j = 0; j < proyecto.ciclos.length; j++) {
                 if (proyecto.ciclos[j].familia_id === props.listaFamilias[i].id) {
-                    return true;
+                    familiaEncontrada = true;
+                    break;
                 }
             }
+            if (!familiaEncontrada) {
+                return false;
+            }
         }
-        return false;
+        return true;
     }
 
     return (

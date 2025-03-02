@@ -29,13 +29,18 @@ const ResultadosBusquedaAlumnos = (props) =>{
         // y comprobamos si el alumno tiene alguna de las familias profesionales
         // Recorriendo las dos listas de objetos, si encontramos alguna coincidencia, devolvemos true si no, false
         for (let i = 0; i < props.listaFamilias.length; i++) {
+            let familiaEncontrada = false;
             for (let j = 0; j < alumno.ciclos.length; j++) {
                 if (alumno.ciclos[j].familia_id === props.listaFamilias[i].id) {
-                    return true;
+                    familiaEncontrada = true;
+                    break;
                 }
             }
+            if (!familiaEncontrada) {
+                return false;
+            }
         }
-        return false;
+        return true;
     }
 
     function filtrarListaAlumnosPorPerfilCompetencial(alumno){
@@ -43,13 +48,18 @@ const ResultadosBusquedaAlumnos = (props) =>{
         // y comprobamos si el alumno tiene alguna de las competencias
         // Recorriendo las dos listas de objetos, si encontramos alguna coincidencia, devolvemos true si no, false
         for (let i = 0; i < props.listaPerfiles.length; i++) {
+            let competenciaEncontrada = false;
             for (let j = 0; j < alumno.competencias.length; j++) {
                 if (alumno.competencias[j].id === props.listaPerfiles[i].id) {
-                    return true;
+                    competenciaEncontrada = true;
+                    break;
                 }
             }
+            if (!competenciaEncontrada) {
+                return false;
+            }
         }
-        return false
+        return true;
     }
 
     // Función que se encarga de comprobar si el alumno cumple con los filtros de familia profesional y perfil competencial
