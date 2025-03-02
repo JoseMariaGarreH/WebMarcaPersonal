@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
-import './Home.css';
-import Pie from "../../componentes/Pie/Pie";
 import { useContext } from "react";
+import './Home.css';
+
+// -- Componentes -------------------------------------------------
+import Pie from "../../componentes/Pie/Pie";
+// -- Contextos -------------------------------------------------
 import IdiomaContext from "../../contextos/IdiomaContext";
 
 const Menu = () => {

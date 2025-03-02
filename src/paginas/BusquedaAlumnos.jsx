@@ -1,7 +1,9 @@
+import { useState } from "react";
+
+// -- Componentes -------------------------------------------------
 import ListaPerfilesCompetenciales from "../componentes/ListaPerfilesCompetenciales/ListaPerfilesCompetenciales";
 import MenuEmpresa from "../componentes/MenuEmpresa/MenuEmpresa";
 import ResultadosBusquedaAlumnos from "../componentes/ResultadosBusquedaAlumnos/ResultadosBusquedaAlumnos";
-import { useState } from "react";
 
 const BusquedaAlumnos = () => {
 

@@ -1,21 +1,26 @@
-import usePerfilesCompetenciales from '../hooks/usePerfilesCompetenciales';
 import flecha from "../assets/caretupminor-svgrepo-com.svg";
 import { useState } from 'react';
 
+// -- Hooks ---------------------------------------------------------
+import usePerfilesCompetenciales from '../hooks/usePerfilesCompetenciales';
+
 const FiltroPerfilCompetencial = (props) => {
 
-    const { listaPerfilesCompetenciales } = usePerfilesCompetenciales();
-    const [pulsado, setPulsado] = useState(false);
+    const { listaPerfilesCompetenciales } = usePerfilesCompetenciales(); // Recogemos la lista de perfiles competenciales del custom hook
+    const [pulsado, setPulsado] = useState(false); // Estado que controla si el botón de filtro está pulsado o no
 
+    // Función que maneja el checkbox de los perfiles competenciales
     function manejarCheckBox(perfilCompetencial, event) {
+        // Si el checkbox está marcado, añadimos el perfil competencial a la lista de perfiles competenciales
         if (event.target.checked) {
             props.setListaPerfiles(props.listaPerfiles.concat(perfilCompetencial));
-            console.log(props.listaPerfiles);
-        } else {
+        } else { // Si no, la eliminamos de la lista
+            // Recorremos la lista de perfiles competenciales y eliminamos la que tenga el mismo id que la que queremos eliminar
             props.setListaPerfiles(props.listaPerfiles.filter((perfil) => perfil.id !== perfilCompetencial.id));
         }
     }
 
+    // Función que construye los perfiles competenciales con los datos que le hemos pasado
     function manejarPerfilesCompetenciales(perfilCompetencial) {
         return (
             <div key={perfilCompetencial.nombre}>
@@ -27,6 +32,7 @@ const FiltroPerfilCompetencial = (props) => {
         )
     }
 
+    // Función que maneja la pulsación del botón de filtro
     function manejarPulsacion() {
         setPulsado(!pulsado);
     }

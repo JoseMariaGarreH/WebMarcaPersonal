@@ -1,7 +1,11 @@
 import "./ListaFamiliaProfesionales.css";
 import { useContext } from "react";
-import IdiomaContext from "../../contextos/IdiomaContext";
+
+// -- Componentes -------------------------------------------------
 import FiltroFamiliaProfesionales from "../FiltroFamiliaProfesional";
+// -- Contextos -------------------------------------------------
+import IdiomaContext from "../../contextos/IdiomaContext";
+
 
 const ListaFamiliaProfesionales = (props) => {
 
@@ -14,6 +18,7 @@ const ListaFamiliaProfesionales = (props) => {
                     <div className="card-header">
                         <h5 className="mb-0">{idioma.proyectos.op1}</h5>
                         <div className="card-body">
+                            {/* Llevamos toda la lógica del filtrado hacia otro componente y le pasamos los valores que necesita */}
                             <FiltroFamiliaProfesionales idioma={idioma}
                                                         listaFamilias={props.listaFamilias} 
                                                         setListaFamilias={props.setListaFamilias}>

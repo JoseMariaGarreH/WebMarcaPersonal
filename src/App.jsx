@@ -1,15 +1,24 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
+
+// -- Componentes -------------------------------------------------
+import Cabecera from './componentes/Cabecera/Cabecera'
+
+// -- Contextos -------------------------------------------------
+import IdiomaContext from './contextos/IdiomaContext'
+
+// -- Mooks -------------------------------------------------
+import idiomas from './mocks/mock-idiomas'
+
+// -- Páginas -------------------------------------------------
 import Home from './paginas/Home/Home'
 import Empresa from './paginas/Empresas'
 import CentroEducativo from './paginas/CentroEducativo'
 import Alumnos from './paginas/Alumnos'
-import Cabecera from './componentes/Cabecera/Cabecera'
-import IdiomaContext from './contextos/IdiomaContext'
-import { useState } from 'react'
-import idiomas from './mocks/mock-idiomas'
 import BusquedaProyectos from "./paginas/BusquedaProyectos";
 import BusquedaAlumnos from "./paginas/BusquedaAlumnos";
+
 
 function App() {
 

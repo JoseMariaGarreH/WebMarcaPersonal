@@ -56,3 +56,8 @@ ul {
     width: 160px;
     border-radius: 5px;
 }
+
+.small{
+    font-size: 0.75em;
+}
+

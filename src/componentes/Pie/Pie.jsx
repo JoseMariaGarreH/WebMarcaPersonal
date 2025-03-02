@@ -1,18 +1,21 @@
 import { useContext } from 'react';
-import './Pie.css';
-import IdiomaContext from '../../contextos/IdiomaContext';
-import useCount from '../../hooks/useCount';
 import svg_facebook from '../../assets/facebook.svg';
 import svg_x from '../../assets/x_light.svg';
 import svg_instagram from '../../assets/instagram.svg';
 import svg_tiktok from '../../assets/tiktok.svg';
 import svg_youtube from '../../assets/youtube.svg';
 import img_marca_personal from '../../img/mp-logoReves.png';
+import './Pie.css';
+
+// -- Hooks -------------------------------------------------
+import useCount from '../../hooks/useCount';
+// -- Contextos -------------------------------------------------
+import IdiomaContext from '../../contextos/IdiomaContext';
 
 const Pie = () => {
 
-    const { idioma } = useContext(IdiomaContext);
-    const counts = useCount();
+    const { idioma } = useContext(IdiomaContext); // Recupera el idioma seleccionado
+    const counts = useCount(); // Recupera los contadores que hemos recogido del ENDPOINT
 
     return (
         <>
@@ -23,15 +26,15 @@ const Pie = () => {
                             <div className="row">
                                 <div className="col-12 col-md-3">
                                     <h5 className="font-weight-bold" >{idioma.temas.op1}</h5>
-                                    <h2 className="font-weight-bold">{counts.listaCounts[2]}</h2>
+                                    <h2 className="font-weight-bold">{counts.listaCounts[2]}</h2> // Muestra el número de proyectos
                                 </div>
                                 <div className="col-12 col-md-3 mx-auto">
                                     <h5 className="font-weight-bold">{idioma.temas.op2}</h5>
-                                    <h2 className="font-weight-bold">{counts.listaCounts[1]}</h2>
+                                    <h2 className="font-weight-bold">{counts.listaCounts[1]}</h2> // Muestra el número de alumnos
                                 </div>
                                 <div className="col-12 col-md-3">
                                     <h5 className="font-weight-bold">{idioma.temas.op3}</h5>
-                                    <h2 className="font-weight-bold">{counts.listaCounts[0]}</h2>
+                                    <h2 className="font-weight-bold">{counts.listaCounts[0]}</h2> // Muestra el número de centros educativos
                                 </div>
                             </div>
                         </div>

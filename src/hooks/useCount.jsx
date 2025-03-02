@@ -1,22 +1,26 @@
 import { useEffect, useState } from "react";
+
+// -- Servicios -------------------------------------------------
 import getCounts from "../servicios/getCounts";
 
 const useCount = () => {
 
+    // Definimos un estado para guardar los valores de la propiedad count de los objetos que nos devuelve el servicio
     const [listaCounts,setListaCounts] = useState([]);
 
-    function loadCounts(){
+    function obtenerCounts(){
         getCounts().then(counts => {
-            console.log(counts);
+            // Guardamos en un array los valores de la propiedad count de cada objeto que nos devuelve el servicio
             const countValues = counts.map(item => item.count);
-            console.log(countValues);
+            // Actualizamos el estado con el array de valores
             setListaCounts(countValues);
         });
     }
 
-    useEffect(loadCounts,[]);
+    // Llamamos a la función que obtiene los counts cuando se renderiza el componente
+    useEffect(obtenerCounts,[]);
 
-    console.log(listaCounts);
+    // Devolvemos los valores que queremos exponer en el hook
     return {listaCounts}
 }
 

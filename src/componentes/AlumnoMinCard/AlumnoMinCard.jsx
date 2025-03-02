@@ -3,13 +3,19 @@ import persona from '../../img/persona.jpg'
 
 const AlumnoMinCard = (props) => {
 
+    // Función que pinta los ciclos en la tarjeta de alumno para mostrarlos con un tooltip que muestra el nombre del ciclo
     function manejarCiclos(ciclo) {
         return <li className="list-group-item small p-1" data-bs-toggle="tooltip" title={ciclo.nombre} key={ciclo.id}>{ciclo.codCiclo}</li>
     }
 
+    // Función que pinta los idiomas en la tarjeta de alumno para mostrarlos, con el idioma, el nivel y si está certificado
+    // Con un tooltip que muestra si está certificado o no, su nivel y el nombre del idioma
     function manejarIdiomas(idioma) {
+        // Si el idioma está certificado, se muestra una C, si no, SC
+        // Para luego guardarlo en una variable que se mostrará en el tooltip
         const certificadoTooltip = idioma.certificado ? "certificado" : "sin certificar";
         const certificadoLabel = idioma.certificado ? "C" : "SC";
+
         return (
             <li className="list-group-item small p-1" key={idioma.alpha2}>
                 <img 
