@@ -11,10 +11,13 @@ function getCounts() {
     // Usamos fetch para recuperar los post de la REST API. Puesto que hacemo una petición al servidor
     const request = apiURLs.map( apiURL =>
             fetch(apiURL).then(response => response.json()) // Maneja la respuesta convirtiéndola a JSON
-        .catch(error => console.log("error", error)) // Captura cualquier error que ocurra durante la operación fetch y lo registra en la consola
+        .catch(error => {
+            console.log("error", error);
+            return 0; // Devuelve 0 si hay un error
+        }) // Captura cualquier error que ocurra durante la operación fetch y lo registra en la consola
     )
 
-    return Promise.all(request); // Esta promesa se resuelve cuando todas las promesas en el iterable se han resuelto o se rechaza si alguna de las promesas se rechaza.
+    return Promise.all(request); // Esta promesa se resuelve cuando todas las promesas en el iterable se han resuelto o se rechaza si alguna de las promesas se rechaza
 }
 
 export default getCounts;

@@ -1,8 +1,8 @@
-import flecha from "../assets/caretupminor-svgrepo-com.svg";
+import flecha from "../../assets/caretupminor-svgrepo-com.svg";
 import { useState } from 'react';
 
 // -- Hooks ---------------------------------------------------------
-import usePerfilesCompetenciales from '../hooks/usePerfilesCompetenciales';
+import usePerfilesCompetenciales from '../../hooks/usePerfilesCompetenciales';
 
 const FiltroPerfilCompetencial = (props) => {
 

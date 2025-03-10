@@ -1,5 +1,5 @@
-import banderaEsp from '../assets/flag-for-flag-spain-svgrepo-com.svg';
-import banderaGb from '../assets/united-kingdom-uk-svgrepo-com.svg';
+import banderaEsp from '../../assets/flag-for-flag-spain-svgrepo-com.svg';
+import banderaGb from '../../assets/united-kingdom-uk-svgrepo-com.svg';
 
 const BotonIdiomas = (props) => {
 

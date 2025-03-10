@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 // -- Componentes -------------------------------------------------
-import ListaFamiliaProfesionales from "../componentes/ListaFamiliaProfesionales/ListaFamiliaProfesionales";
-import ResultadosBusquedaProyectos from "../componentes/ResultadosBusquedaProyectos/ResultadosBusquedaProyectos";
-import MenuEmpresa from "../componentes/MenuEmpresa/MenuEmpresa";
+import ListaFamiliaProfesionales from "../../componentes/ListaFamiliaProfesionales/ListaFamiliaProfesionales";
+import ResultadosBusquedaProyectos from "../../componentes/ResultadosBusquedaProyectos/ResultadosBusquedaProyectos";
+import MenuEmpresa from "../../componentes/MenuEmpresa/MenuEmpresa";
 
 const BusquedaProyectos = () => {
 

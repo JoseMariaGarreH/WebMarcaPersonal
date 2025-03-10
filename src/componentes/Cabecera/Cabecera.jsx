@@ -1,11 +1,10 @@
-import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import logoNaranja from "../../img/mp-logoNaranja100.png";
 import { Link } from "react-router-dom";
 import './Cabecera.css';
 
 // -- Componentes -------------------------------------------------
-import BotonIdiomas from "../BotonIdiomas";
+import BotonIdiomas from "../BotonIdiomas/BotonIdiomas";
 // -- Contextos -------------------------------------------------
 import IdiomaContext from "../../contextos/IdiomaContext";
 

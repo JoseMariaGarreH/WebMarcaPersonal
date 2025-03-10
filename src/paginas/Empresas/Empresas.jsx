@@ -1,4 +1,4 @@
-import MenuEmpresa from "../componentes/MenuEmpresa/MenuEmpresa";
+import MenuEmpresa from "../../componentes/MenuEmpresa/MenuEmpresa";
 
 
 const Empresas = () => {

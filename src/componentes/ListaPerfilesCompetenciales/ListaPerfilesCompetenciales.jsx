@@ -2,8 +2,8 @@ import { useContext } from 'react';
 import './ListaPerfilesCompetenciales.css';
 
 // -- Componentes -------------------------------------------------
-import FiltroFamiliaProfesionales from '../FiltroFamiliaProfesional';
-import FiltroPerfilCompetencial from '../FiltroPerfilCompetencial';
+import FiltroFamiliaProfesionales from '../FiltroFamiliaProfesional/FiltroFamiliaProfesional';
+import FiltroPerfilCompetencial from '../FiltroPerfilCompetencial/FiltroPerfilCompetencial';
 
 // -- Contextos -------------------------------------------------
 import IdiomaContext from '../../contextos/IdiomaContext';

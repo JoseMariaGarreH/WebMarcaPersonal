@@ -1,8 +1,8 @@
-import flecha from "../assets/caretupminor-svgrepo-com.svg";
+import flecha from "../../assets/caretupminor-svgrepo-com.svg";
 import { useState } from "react";
 
 // -- Hooks ---------------------------------------------------------
-import useFamiliasProfesionales from "../hooks/useFamiliasProfesionales";
+import useFamiliasProfesionales from "../../hooks/useFamiliasProfesionales";
 
 const FiltroFamiliaProfesionales = (props) => {
 

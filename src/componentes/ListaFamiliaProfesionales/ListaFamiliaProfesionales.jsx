@@ -2,7 +2,7 @@ import "./ListaFamiliaProfesionales.css";
 import { useContext } from "react";
 
 // -- Componentes -------------------------------------------------
-import FiltroFamiliaProfesionales from "../FiltroFamiliaProfesional";
+import FiltroFamiliaProfesionales from "../FiltroFamiliaProfesional/FiltroFamiliaProfesional";
 // -- Contextos -------------------------------------------------
 import IdiomaContext from "../../contextos/IdiomaContext";
 

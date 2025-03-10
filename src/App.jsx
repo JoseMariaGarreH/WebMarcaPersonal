@@ -13,11 +13,11 @@ import idiomas from './mocks/mock-idiomas'
 
 // -- Páginas -------------------------------------------------
 import Home from './paginas/Home/Home'
-import Empresa from './paginas/Empresas'
-import CentroEducativo from './paginas/CentroEducativo'
-import Alumnos from './paginas/Alumnos'
-import BusquedaProyectos from "./paginas/BusquedaProyectos";
-import BusquedaAlumnos from "./paginas/BusquedaAlumnos";
+import Empresa from './paginas/Empresas/Empresas'
+import CentroEducativo from './paginas/CentroEducativo/CentroEducativo'
+import Alumnos from './paginas/Alumnos/Alumnos'
+import BusquedaProyectos from "./paginas/BusquedaProyectos/BusquedaProyectos";
+import BusquedaAlumnos from "./paginas/BusquedaAlumnos/BusquedaAlumnos";
 
 
 function App() {
